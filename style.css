@@ -152,6 +152,21 @@ h1 {
   cursor: pointer;
 }
 
+.x,
+.o {
+  font-family: "arial";
+  font-size: 70px;
+  position: absolute;
+}
+
+.x {
+  color: tomato;
+}
+
+.o {
+  color: #33dbff;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   :root {
