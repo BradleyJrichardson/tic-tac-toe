@@ -1,12 +1,28 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400, 600);
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai|Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+}
 body {
-  font-family: "Source Sans Pro";
   background: #29335c;
   background-size: cover;
 }
 
 h1 {
   color: white;
+  font-family: "Baloo Bhai", cursive;
+  font-size: 10rem;
+}
+div {
+  color: white;
+}
+
+.container1 {
+  width: 40%;
+}
+.container2 {
+  width: 60%;
 }
 
 .game {
