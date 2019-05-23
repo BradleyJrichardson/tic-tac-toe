@@ -24,14 +24,23 @@ const whoseTurn = object => {
   }
 };
 
+const checkWinX = xArray => {
+  return winningArrays.forEach(array => {
+    return xArray.includes(array);
+  });
+};
+
+console.log(checkWinX([1, 3, 4, 2]));
+
 const addX = object => {
   document.getElementById(object.id).innerHTML = "<div class='x'>X</div>";
   xArray.push(parseInt(object.id));
-  console.log(xArray);
+  if (checkWinX()) {
+    alert("winner");
+  }
 };
 
 const addO = object => {
   document.getElementById(object.id).innerHTML = "<div class='x'>O</div>";
   oArray.push(parseInt(object.id));
-  console.log(oArray);
 };
