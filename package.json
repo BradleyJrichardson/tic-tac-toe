@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "<a href=\"http://fvcproductions.com\"><img src=\"https://avatars1.githubusercontent.com/u/4284691?v=3&s=200\" title=\"FVCproductions\" alt=\"FVCproductions\"></a>",
   "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BradleyJrichardson/tic-tac-toe.git"
@@ -17,10 +14,11 @@
   },
   "homepage": "https://github.com/BradleyJrichardson/tic-tac-toe#readme",
   "devDependencies": {
+    "chai": "^4.2.0",
+    "jest": "^24.8.0",
     "mocha": "^6.1.4"
   },
   "scripts": {
-    "start": "script.js",
-    "test": "mocha"
+    "test": "jest"
   }
 }
