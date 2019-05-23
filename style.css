@@ -118,7 +118,7 @@ h1 {
 .text-container {
   width: 30%;
   padding: 50px;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .game-container {
@@ -128,8 +128,8 @@ h1 {
   background-color: rgba(0, 0, 0, 0.2);
   margin: 50px auto;
   vertical-align: center;
-  width: 20rem;
-  height: 20rem;
+  width: 40rem;
+  height: 40rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-templaterows: 1fr 1fr 1fr;
@@ -160,12 +160,20 @@ h1 {
   .container {
     flex-direction: column;
   }
+  .text-container {
+    width: 80%;
+    padding: 50px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   :root {
     font-size: 7px;
+  }
+  .text-container {
+    width: 80%;
+    padding: 50px;
   }
   .container {
     flex-direction: column;
