@@ -86,11 +86,14 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
 }
-* {
+:root {
   font-family: "Roboto", sans-serif;
   font-size: 10px;
+  color: white;
 }
+
 body {
   background: #29335c;
   background-size: cover;
@@ -99,21 +102,23 @@ body {
 h1 {
   color: white;
   font-family: "Baloo Bhai", cursive;
-  font-size: 8rem;
+  font-size: 7rem;
 }
 
 .header {
-  height: 10rem;
   text-align: center;
 }
 
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-container {
   width: 30%;
   padding: 50px;
+  font-size: 2rem;
 }
 
 .game-container {
@@ -123,8 +128,8 @@ h1 {
   background-color: rgba(0, 0, 0, 0.2);
   margin: 50px auto;
   vertical-align: center;
-  width: 400px;
-  height: 400px;
+  width: 40rem;
+  height: 40rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-templaterows: 1fr 1fr 1fr;
@@ -145,4 +150,77 @@ h1 {
   background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.5s;
   cursor: pointer;
+}
+
+.x,
+.o {
+  font-family: "arial";
+  font-size: 70px;
+  position: absolute;
+}
+
+.x {
+  color: tomato;
+}
+
+.o {
+  color: #33dbff;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 6px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .text-container {
+    width: 80%;
+    padding: 50px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  :root {
+    font-size: 7px;
+  }
+  .text-container {
+    width: 80%;
+    padding: 50px;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  :root {
+    font-size: 8px;
+  }
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  :root {
+    font-size: 9px;
+  }
+  .container {
+    flex-direction: row;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  :root {
+    font-size: 10px;
+  }
+  .container {
+    flex-direction: row;
+  }
 }
