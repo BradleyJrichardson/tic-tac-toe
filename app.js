@@ -60,10 +60,12 @@ const whoseTurn = object => {
 
 const computeraddO = () => {
   let choices = [].concat.apply([], board);
+  let arrayXY = xArray.concat(oArray);
   choices = choices.filter(function(item) {
-    return xArray.indexOf(item) === -1;
+    return arrayXY.indexOf(item) === -1;
   });
   let randomAnswer = choices[Math.floor(Math.random() * choices.length)];
+  console.log(randomAnswer);
   document.getElementById(randomAnswer).innerHTML = "<div class='x'>O</div>";
   oArray.push(parseInt(randomAnswer));
   if (checkWinO()) {
