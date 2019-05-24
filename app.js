@@ -21,6 +21,7 @@ const reset = () => {
   document.querySelectorAll(".space").forEach(function(a) {
     a.style.background = "white";
   });
+  document.querySelector("div.versing").innerHTML = "";
   xArray = [];
   oArray = [];
   counter = 1;
@@ -110,6 +111,9 @@ const checkWinO = () => {
   let result = false;
   winningArrays.forEach(array => {
     if (array.every(v => oArray.includes(v))) {
+      array.forEach(e => {
+        document.getElementById(e).style.background = "green";
+      });
       result = true;
     }
   });
