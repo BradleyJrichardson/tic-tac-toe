@@ -87,7 +87,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: "Roboto", sans-serif;
 }
 :root {
   font-family: "Roboto", sans-serif;
@@ -159,7 +158,7 @@ h1 {
 }
 
 .space {
-  background-color: white;
+  background: white;
   transition: background-color 0.5s;
   display: flex;
   justify-content: center;

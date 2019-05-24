@@ -17,13 +17,16 @@ const winningArrays = [
 const reset = () => {
   document.querySelectorAll(".x").forEach(function(a) {
     a.remove();
-    xArray = [];
-    oArray = [];
-    counter = 1;
-    result = false;
-    versingComputer = false;
-    versingHuman = false;
   });
+  document.querySelectorAll(".space").forEach(function(a) {
+    a.style.background = "white";
+  });
+  xArray = [];
+  oArray = [];
+  counter = 1;
+  result = false;
+  versingComputer = false;
+  versingHuman = false;
 };
 
 const human = () => {
@@ -46,7 +49,7 @@ const whoseTurn = object => {
       addX(object);
       counter++;
     }
-  } else {
+  } else if (versingComputer) {
     if (counter % 2 === 0) {
       computeraddO();
       counter++;
@@ -55,6 +58,8 @@ const whoseTurn = object => {
       counter++;
       whoseTurn();
     }
+  } else {
+    alert("please choose a setting");
   }
 };
 
@@ -65,7 +70,6 @@ const computeraddO = () => {
     return arrayXY.indexOf(item) === -1;
   });
   let randomAnswer = choices[Math.floor(Math.random() * choices.length)];
-  console.log(randomAnswer);
   document.getElementById(randomAnswer).innerHTML = "<div class='x'>O</div>";
   oArray.push(parseInt(randomAnswer));
   if (checkWinO()) {
@@ -93,6 +97,9 @@ const checkWinX = () => {
   let result = false;
   winningArrays.forEach(array => {
     if (array.every(v => xArray.includes(v))) {
+      array.forEach(e => {
+        document.getElementById(e).style.background = "green";
+      });
       result = true;
     }
   });
