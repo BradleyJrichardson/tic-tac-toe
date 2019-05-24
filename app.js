@@ -38,12 +38,36 @@ const computer = () => {
 };
 
 const whoseTurn = object => {
-  if (counter % 2 === 0) {
-    addX(object);
-    counter++;
+  if (versingHuman) {
+    if (counter % 2 === 0) {
+      addO(object);
+      counter++;
+    } else {
+      addX(object);
+      counter++;
+    }
   } else {
-    addO(object);
-    counter++;
+    if (counter % 2 === 0) {
+      computeraddO();
+      counter++;
+    } else {
+      addX(object);
+      counter++;
+      whoseTurn();
+    }
+  }
+};
+
+const computeraddO = () => {
+  let choices = [].concat.apply([], board);
+  choices = choices.filter(function(item) {
+    return xArray.indexOf(item) === -1;
+  });
+  let randomAnswer = choices[Math.floor(Math.random() * choices.length)];
+  document.getElementById(randomAnswer).innerHTML = "<div class='x'>O</div>";
+  oArray.push(parseInt(randomAnswer));
+  if (checkWinO()) {
+    alert("Computer wins!!!");
   }
 };
 
