@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/BradleyJrichardson/tic-tac-toe.svg?branch=master)](https://travis-ci.org/BradleyJrichardson/tic-tac-toe)
 
 > A browser game built with vanilla JS and CSS
+> [Live Site](https://condescending-sinoussi-c7ba57.netlify.com/)<br>
 
 ## How Do I Play?
 
