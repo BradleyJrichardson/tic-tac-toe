@@ -21,4 +21,14 @@ const checkWinX = () => {
   return result;
 };
 
+const checkWinO = () => {
+  let result = false;
+  winningArrays.forEach(array => {
+    if (array.every(v => oArray.includes(v))) {
+      result = true;
+    }
+  });
+  return result;
+};
+
 console.log(checkWinX());

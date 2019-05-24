@@ -23,15 +23,53 @@ const whoseTurn = object => {
     counter++;
   }
 };
+const reset = () => {
+  document.querySelectorAll(".x").forEach(function(a) {
+    a.remove();
+    var xArray = [];
+    var oArray = [];
+    let counter = 1;
+    console.log(xArray);
+  });
+  // document.querySelectorAll("div.x").innerHTML = null;
+};
 
 const addX = object => {
   document.getElementById(object.id).innerHTML = "<div class='x'>X</div>";
   xArray.push(parseInt(object.id));
+  if (checkWinX()) {
+    alert("Player X wins!!!");
+    result = false;
+  }
 };
 
 const addO = object => {
   document.getElementById(object.id).innerHTML = "<div class='x'>O</div>";
   oArray.push(parseInt(object.id));
+  if (checkWinO()) {
+    alert("Player O wins!!!");
+    result = false;
+  }
+};
+
+const checkWinX = () => {
+  let result = false;
+  winningArrays.forEach(array => {
+    if (array.every(v => xArray.includes(v))) {
+      result = true;
+    }
+  });
+  return result;
+};
+
+const checkWinO = () => {
+  let result = false;
+  winningArrays.forEach(array => {
+    if (array.every(v => oArray.includes(v))) {
+      result = true;
+    }
+  });
+  return result;
 };
 
 const sum = (a, b) => a + b;
