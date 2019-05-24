@@ -1,8 +1,8 @@
 let board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
 
 let counter = 1;
-var xArray = [];
-var oArray = [];
+let xArray = [];
+let oArray = [];
 const winningArrays = [
   [1, 2, 3],
   [4, 5, 6],
@@ -26,10 +26,10 @@ const whoseTurn = object => {
 const reset = () => {
   document.querySelectorAll(".x").forEach(function(a) {
     a.remove();
-    var xArray = [];
-    var oArray = [];
+    xArray = [];
+    oArray = [];
     let counter = 1;
-    console.log(xArray);
+    result = false;
   });
   // document.querySelectorAll("div.x").innerHTML = null;
 };
@@ -39,7 +39,6 @@ const addX = object => {
   xArray.push(parseInt(object.id));
   if (checkWinX()) {
     alert("Player X wins!!!");
-    result = false;
   }
 };
 
@@ -48,7 +47,6 @@ const addO = object => {
   oArray.push(parseInt(object.id));
   if (checkWinO()) {
     alert("Player O wins!!!");
-    result = false;
   }
 };
 
