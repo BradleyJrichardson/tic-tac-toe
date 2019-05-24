@@ -9,10 +9,16 @@ const winningArrays = [
   [3, 5, 7]
 ];
 
-const checkWinX = xArray => {
-  return winningArrays.forEach(array => {
-    return xArray.includes(array);
+let xArray = [1, 3, 4, 2];
+
+const checkWinX = () => {
+  let result = false;
+  winningArrays.forEach(array => {
+    if (array.every(v => xArray.includes(v))) {
+      result = true;
+    }
   });
+  return result;
 };
 
-console.log([1, 3, 4, 2].some(e => [1, 2, 3].includes(e)));
+console.log(checkWinX());
