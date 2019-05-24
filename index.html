@@ -20,8 +20,16 @@
         placing three of their marks in a horizontal, vertical, or diagonal row
         wins the game.
         <br />
+        <br />
+        <div class="heading">Choose setting</div>
+        <button id="reset-game" onclick="human()">Human</button>
+        <button id="reset-game" onclick="computer()">Computer</button>
+        <hr />
+        <div class="versing"></div>
       </div>
+
       <button id="reset-game" onclick="reset()">Reset Game</button>
+
       <div class="game-container">
         <div class="grid">
           <div class="space" id="1" onclick="whoseTurn (this)"></div>

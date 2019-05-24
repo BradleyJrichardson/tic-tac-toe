@@ -1,8 +1,9 @@
 let board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-
 let counter = 1;
 let xArray = [];
 let oArray = [];
+let versingComputer = false;
+let versingHuman = false;
 const winningArrays = [
   [1, 2, 3],
   [4, 5, 6],
@@ -13,6 +14,28 @@ const winningArrays = [
   [1, 5, 9],
   [3, 5, 7]
 ];
+const reset = () => {
+  document.querySelectorAll(".x").forEach(function(a) {
+    a.remove();
+    xArray = [];
+    oArray = [];
+    counter = 1;
+    result = false;
+    versingComputer = false;
+    versingHuman = false;
+  });
+};
+
+const human = () => {
+  document.querySelector("div.versing").innerHTML = "Currently versing a Human";
+  versingHuman = true;
+};
+
+const computer = () => {
+  document.querySelector("div.versing").innerHTML =
+    "Currently versing a Computer";
+  versingComputer = true;
+};
 
 const whoseTurn = object => {
   if (counter % 2 === 0) {
@@ -22,16 +45,6 @@ const whoseTurn = object => {
     addO(object);
     counter++;
   }
-};
-const reset = () => {
-  document.querySelectorAll(".x").forEach(function(a) {
-    a.remove();
-    xArray = [];
-    oArray = [];
-    let counter = 1;
-    result = false;
-  });
-  // document.querySelectorAll("div.x").innerHTML = null;
 };
 
 const addX = object => {
