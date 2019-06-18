@@ -78,6 +78,13 @@ const computeraddO = () => {
   }
 };
 
+const computerSmartAdd = () => {
+  // compare the winning arrays to the xArray
+  winningArrays.forEach(array => {
+    array.some(v => xArray.includes(v));
+  });
+};
+
 const addX = object => {
   document.getElementById(object.id).innerHTML = "<div class='x'>X</div>";
   xArray.push(parseInt(object.id));
